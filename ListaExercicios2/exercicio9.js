@@ -1,13 +1,10 @@
-const multiplicar = (x, y) => {
-    if(x < 0 && y < 0)
-        return 'Parâmetros devem ser maior que 0'
-    
-    let soma = 0
+const repete = (x, y) => {
+    let vet = []
 
     for(let i=0;i<y;i++)
-        soma += x
+        vet.push(x)
 
-    return soma
+    return vet
 }
 
-console.log(multiplicar(2,7))
+console.log(repete(7,3))

@@ -1,10 +1,11 @@
-const soma = x => {
-    let soma = 0;
+const despesasTotais = x => {
+    let despesas = 0
 
-    for(let i in x)
-        soma += x[i]
-
-    return soma;
+    for(let i in x){
+        despesas += x[i]['preco']
+    }
+    
+    return despesas
 }
 
-console.log(soma([15,15,15,15]))
+console.log(despesasTotais([{nome: "Jornal online", categoria: "Informação", preco: 89.99}, {nome: "Cinema", categoria: "Entretenimento", preco: 150}]))

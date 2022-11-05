@@ -1,10 +1,10 @@
-const repete = (x, y) => {
-    let vet = []
+const simboloMais = x => {
+    let mais = ""
 
-    for(let i=0;i<y;i++)
-        vet.push(x)
+    for(let i=0;i<x;i++)
+        mais += "+"
 
-    return vet
+    return mais
 }
 
-console.log(repete(7,3))
+console.log(simboloMais(4))

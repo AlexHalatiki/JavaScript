@@ -1,8 +1,10 @@
-const anoBissexto = x => {
-    if(x % 4 == 0 && x % 100 == 0 && x % 400 == 0 || x % 4 == 0 && x % 100 != 0)
-        return true
-    
-    return false
+const soma = x => {
+    let soma = 0;
+
+    for(let i in x)
+        soma += x[i]
+
+    return soma;
 }
 
-console.log(anoBissexto(2020))
+console.log(soma([15,15,15,15]))

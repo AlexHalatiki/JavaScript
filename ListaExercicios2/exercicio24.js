@@ -1,12 +1,10 @@
-const contaPalavras = x => {
-    x = x.trim()
-    let palavras = 0
+const contarCaractere = (x,y) => {
+    let contador = 0
+    for(let i=0;i<y.length;i++)
+        if(y[i] == x)
+            contador++
 
-    for(let i=0;i<x.length;i++)
-        if(x[i] === " ")
-            palavras++
-
-    return palavras + 1
+    return contador
 }
 
-console.log(contaPalavras("a d e a e"))
+console.log(contarCaractere("r","A sorte favorece os audazes"))

@@ -1,10 +1,25 @@
-const contarCaractere = (x,y) => {
-    let contador = 0
-    for(let i=0;i<y.length;i++)
-        if(y[i] == x)
-            contador++
+const buscarPalavrasSemelhantes = (x,y) => {
+    let vetor = []
 
-    return contador
+    for(let string of y)
+        for(let c=0;c<string.length;c++)
+            if(string[c] == x[0]){
+                let achou = true;
+                let indice = c
+                for(let j=0;j<x.length;j++){
+                    if(string[indice] != x[j]){
+                        achou = false;
+                        break;
+                    }
+                    indice++;
+                }
+                if(achou){
+                    vetor.push(string)
+                    break;
+                }
+            }
+
+    return vetor
 }
 
-console.log(contarCaractere("r","A sorte favorece os audazes"))
+console.log(buscarPalavrasSemelhantes("python", ["javascript", "java"]))

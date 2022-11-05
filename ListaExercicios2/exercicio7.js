@@ -1,11 +1,9 @@
-const inverso = x => {
-    if(typeof x === 'boolean')
-        return !x
-    
-    if(typeof x === 'number')
-        return -x
-    
-    return 'boolean ou número esperados, mas o parâmetro é do tipo ' + typeof x
+const entre = (numero, minimo, maximo, inclusivo = false) => {
+    if(inclusivo){
+        return numero >= minimo && numero <= maximo
+    }
+
+    return numero > minimo && numero < maximo
 }
 
-console.log(inverso(-2000))
+console.log(entre(3, 3, 150, true))

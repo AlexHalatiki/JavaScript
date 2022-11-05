@@ -1,10 +1,5 @@
-const media = x => {
-    let soma = 0
+const areaTriangulo = (x,y) => {
+    return (x*y/2).toFixed(2)
+} 
 
-    for(i in x)
-        soma += x[i]
-
-    return soma / x.length
-}
-
-console.log(media([0, 10]))
+console.log(areaTriangulo(7,9))

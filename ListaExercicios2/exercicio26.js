@@ -1,25 +1,11 @@
-const buscarPalavrasSemelhantes = (x,y) => {
-    let vetor = []
+const removerVogais = x => {
+    let string = ""
 
-    for(let string of y)
-        for(let c=0;c<string.length;c++)
-            if(string[c] == x[0]){
-                let achou = true;
-                let indice = c
-                for(let j=0;j<x.length;j++){
-                    if(string[indice] != x[j]){
-                        achou = false;
-                        break;
-                    }
-                    indice++;
-                }
-                if(achou){
-                    vetor.push(string)
-                    break;
-                }
-            }
+    for(let i=0;i<x.length;i++)
+        if(x[i] != 'a' && x[i] != 'e' && x[i] != 'i' && x[i] != 'o' && x[i] != 'u')
+            string += x[i]
 
-    return vetor
+    return string
 }
 
-console.log(buscarPalavrasSemelhantes("python", ["javascript", "java"]))
+console.log(removerVogais("Fundamentos"))

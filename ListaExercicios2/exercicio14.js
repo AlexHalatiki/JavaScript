@@ -1,11 +1,14 @@
-const filtrarNumeros = x => {
-    let nums = []
+const objetoParaArray = x => {
+    let chaves = Object.keys(x)
+    let retorno = []
 
-    for(let y in x)
-        if(typeof x[y] === 'number')
-            nums.push(x[y])
+    for(let i in chaves){
+        let aux = []
+        aux.push(chaves[i], x[chaves[i]])
+        retorno.push(aux)
+    }
 
-    return nums
+    return retorno
 }
 
-console.log(filtrarNumeros(["a", "c"]))
+console.log(objetoParaArray({codigo: 11111, preco: 12000}))

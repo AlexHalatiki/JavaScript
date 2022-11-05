@@ -1,10 +1,13 @@
-const primeiroEUltimo = x => {
-    let vet = []
+const copiaObjeto = (x,y) => {
+    let obj = {}
+    let chaves = Object.keys(x)
 
-    vet.push(x[0])
-    vet.push(x[x.length-1])
+    for(let i=0;i<chaves.length;i++)
+        if(!(chaves[i] == y))
+            obj[chaves[i]] = x[chaves[i]]
 
-    return vet
+    return obj
 }
 
-console.log(primeiroEUltimo([-100, "aplicativo", 16]))
+let obj = {id: 20, nome: 'caneta', descricao: "Não preenchido"}
+console.log(Object.is(copiaObjeto(obj)))

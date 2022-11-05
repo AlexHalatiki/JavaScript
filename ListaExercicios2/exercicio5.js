@@ -1,7 +1,3 @@
-const mes = x => {
-    const meses = ["janeiro","fevereiro","março","abril","maio","junho","julho","agosto","setembro","outubro","novembro","dezembro"]
+const maiorOuIgual = (x,y) => x === y && x <= y ? true : false
 
-    return meses[x-1]
-}
-
-console.log(mes(1))
+console.log(maiorOuIgual(5,1))

@@ -1,14 +1,11 @@
-const objetoParaArray = x => {
-    let chaves = Object.keys(x)
-    let retorno = []
+const receberSomenteOsParesDeIndicesPares = x => {
+    let vet = []
 
-    for(let i in chaves){
-        let aux = []
-        aux.push(chaves[i], x[chaves[i]])
-        retorno.push(aux)
-    }
+    for(let i=0;i<x.length;i++)
+        if(x[i] % 2 == 0 && i % 2 == 0)
+            vet.push(x[i])
 
-    return retorno
+    return vet
 }
 
-console.log(objetoParaArray({codigo: 11111, preco: 12000}))
+console.log(receberSomenteOsParesDeIndicesPares([10,70,22,43]))

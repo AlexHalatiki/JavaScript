@@ -1,12 +1,10 @@
-const menorDoArray = x => {
-    let menor = x[0]
+const aleatorio = x =>{
+    let random = Math.floor(Math.random() * 10 + 1)
 
-    x.forEach(numero => {
-        if(numero < menor)
-            menor = numero
-    })
-
-    return menor
+    if(x == random)
+        return "Parabéns! O número sorteado foi " + random
+    else
+        return "Que pena! O número sorteado foi " + random
 }
 
-console.log(menorDoArray([10,5,35,65]))
+console.log(aleatorio(10))

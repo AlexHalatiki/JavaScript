@@ -1,13 +1,11 @@
-const copiaObjeto = (x,y) => {
-    let obj = {}
-    let chaves = Object.keys(x)
+const filtrarNumeros = x => {
+    let nums = []
 
-    for(let i=0;i<chaves.length;i++)
-        if(!(chaves[i] == y))
-            obj[chaves[i]] = x[chaves[i]]
+    for(let y in x)
+        if(typeof x[y] === 'number')
+            nums.push(x[y])
 
-    return obj
+    return nums
 }
 
-let obj = {id: 20, nome: 'caneta', descricao: "Não preenchido"}
-console.log(Object.is(copiaObjeto(obj)))
+console.log(filtrarNumeros(["a", "c"]))

@@ -1,5 +1,12 @@
-const areaTriangulo = (x,y) => {
-    return (x*y/2).toFixed(2)
-} 
+const menorDoArray = x => {
+    let menor = x[0]
 
-console.log(areaTriangulo(7,9))
+    x.forEach(numero => {
+        if(numero < menor)
+            menor = numero
+    })
+
+    return menor
+}
+
+console.log(menorDoArray([10,5,35,65]))

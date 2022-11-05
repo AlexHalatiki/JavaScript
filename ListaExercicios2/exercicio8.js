@@ -1,9 +1,13 @@
-const entre = (numero, minimo, maximo, inclusivo = false) => {
-    if(inclusivo){
-        return numero >= minimo && numero <= maximo
-    }
+const multiplicar = (x, y) => {
+    if(x < 0 && y < 0)
+        return 'Parâmetros devem ser maior que 0'
+    
+    let soma = 0
 
-    return numero > minimo && numero < maximo
+    for(let i=0;i<y;i++)
+        soma += x
+
+    return soma
 }
 
-console.log(entre(3, 3, 150, true))
+console.log(multiplicar(2,7))

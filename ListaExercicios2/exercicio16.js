@@ -1,11 +1,8 @@
-const receberSomenteOsParesDeIndicesPares = x => {
-    let vet = []
-
-    for(let i=0;i<x.length;i++)
-        if(x[i] % 2 == 0 && i % 2 == 0)
-            vet.push(x[i])
-
-    return vet
+const anoBissexto = x => {
+    if(x % 4 == 0 && x % 100 == 0 && x % 400 == 0 || x % 4 == 0 && x % 100 != 0)
+        return true
+    
+    return false
 }
 
-console.log(receberSomenteOsParesDeIndicesPares([10,70,22,43]))
+console.log(anoBissexto(2020))
